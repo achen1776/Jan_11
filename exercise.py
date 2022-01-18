@@ -22,6 +22,12 @@ def check_hdl(entry):
     else:
         answer="Low"
     return answer
+
+def driver_hdl():
+    entry = accept_inputs("HDL")
+    answer = check_hdl(entry)
+    Print(answer)
+    
         
         
 
