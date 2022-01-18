@@ -26,7 +26,10 @@ def check_hdl(entry):
 def driver_hdl():
     entry = accept_inputs("HDL")
     answer = check_hdl(entry)
-    Print(answer)
+    output(answer)
+
+def output(answer):
+    print(answer)
     
         
         
