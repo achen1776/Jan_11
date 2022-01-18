@@ -6,12 +6,15 @@ def interface():
     while keep_running:
         print("Options:")
         print("1 - HDL analysis")
+        print("2 - LDL analysis")
         print("9 - Quit")
         choice = input("Enter your choice:")
         if choice=='9':
             keep_running = False
         elif choice=='1':
             driver_hdl()
+        elif choice=='2':
+            driver_ldl()
 
 def accept_inputs(test_name):
     entry = input("Enter the {} test result: ".format(test_name))
@@ -29,6 +32,22 @@ def check_hdl(entry):
 def driver_hdl():
     entry = accept_inputs("HDL")
     answer = check_hdl(entry)
+    output(answer)
+
+def check_ldl(entry):
+    if entry < 130:
+        answer="Normal"
+    elif 159 >= entry >= 130:
+        answer="Borderline High"
+    elif 189 >= entry >= 160:
+        answer="High"
+    else:
+        answer="Very High"
+    return answer
+
+def driver_ldl():
+    entry = accept_inputs("LDL")
+    answer = check_ldl(entry)
     output(answer)
 
 def output(answer):
