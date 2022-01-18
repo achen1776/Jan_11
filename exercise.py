@@ -13,6 +13,15 @@ def interface():
 def accept_inputs(test_name):
     entry = input("Enter the {} test result: ".format(test_name))
     return int(entry)
+
+def check_hdl(entry):
+    if entry >= 60:
+        answer="Normal"
+    elif 60 > entry >= 40:
+        answer="Borderline Low"
+    else:
+        answer="Low"
+    return answer
         
         
 
