@@ -5,10 +5,13 @@ def interface():
     keep_running = True
     while keep_running:
         print("Options:")
+        print("1 - HDL analysis")
         print("9 - Quit")
         choice = input("Enter your choice:")
         if choice=='9':
             keep_running = False
+        elif choice=='1':
+            driver_hdl()
 
 def accept_inputs(test_name):
     entry = input("Enter the {} test result: ".format(test_name))
