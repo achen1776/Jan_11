@@ -1,11 +1,19 @@
 import numpy as np
 
 def interface():
-    print("Alex's Program")
-    print("Options:")
-    print("9 - Quit")
-    choice = input("Enter your choice:")
-    if choice=='9':
-        return
+    print("Blood Test Analysis")
+    keep_running = True
+    while keep_running:
+        print("Options:")
+        print("9 - Quit")
+        choice = input("Enter your choice:")
+        if choice=='9':
+            keep_running = False
+
+def accept_inputs(test_name):
+    entry = input("Enter the {} test result: ".format(test_name))
+    return int(entry)
+        
+        
 
 interface()
